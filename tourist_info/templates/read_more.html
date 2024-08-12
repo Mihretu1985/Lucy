@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{% block title %} Readmore {% endblock title %}
+
+{%block content%}
+
+<div class="container">
+<div class="card">
+    <img class="card-img-top" src="{{region.map.url}}" width=300,  height=400, alt="{{region.name}} Regional Map">
+    <div class="card-body">
+      <h2 class="card-title" style="font-weight: bold">Important Tourist Informations in {{region.region_name}} Tourism</h2>
+    <div class="row">
+        <div class="col-12">
+                  
+            <p class="card-text">
+                <div style="background-color: salmon;">
+                <ul>
+                    <li>Region Capital City: {{region.capital_city}}</li>
+                    <li>Tourist Suport Number : {{region.telephone}}</li>
+                    <li>Tourguide Email: {{region.email}}</li>
+                    <li>Tourist Insight Web: <a href="{{region.website}}" <button type="button" class="btn btn-success">Visit Website</button></a></li>
+                    
+                  
+                </ul>
+            </div>
+
+        
+            </p>
+                <a href="{% url "home" %}" class="btn btn-primary">Go back Home</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  {%endblock content%}
